@@ -4,9 +4,7 @@
 #include <BlynkSimpleEsp8266.h>
 #include <WakeOnLan.h> 
 
-
 char auth[] = "INSERT_BLYK_AUTH_TOKEN";
-
 char ssid[] = "WIFI_SSID";
 char pass[] = "SSID_PASSWORD";
 
@@ -33,7 +31,6 @@ String macToString(byte mac[]) {
 
 BLYNK_WRITE(V1) {
   int pinValue = param.asInt(); 
-  Serial.println("Clicked");
   if (pinValue == 1) {
     byte mac[] = {0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD};
     String macAddress = macToString(mac);
